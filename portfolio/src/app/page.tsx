@@ -11,20 +11,23 @@ export default function Home() {
         {/* Introduction */}
         {Section("Introduction", ["Hi!", 
         "I'm a software developer in the UK that uses the Unity game engine,"
-        , "Node JS, and some web development projects in HTML and CSS."])}
+        , "Node JS, and some web development projects in HTML and CSS."],
+        "bg-black"
+        )}
       </div>
     </div>
   );
 }
 
-function Section(title: string, content: string[]) {
+function Section(title: string, content: string[], bgcolor: string) {
 
   var FinalContent = null;
 
   if (title != "") {
     FinalContent = (
       <div>
-        <h1 className="text-cyan-500">{title}</h1>
+        <h1 className="text-cyan-500 text-10">{title}</h1>
+        <br></br>
         {content.map((item, index) => (
           <p key={index}>{item}</p>
         ))}
@@ -41,7 +44,7 @@ function Section(title: string, content: string[]) {
   }
 
   return (
-    <div className="p-10">
+    <div className={"p-10 rounded-lg max-w-screen-md " + bgcolor}>
       {FinalContent}
     </div>
   );
