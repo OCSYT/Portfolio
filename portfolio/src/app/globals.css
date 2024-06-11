@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(0deg, black, rgb(10, 2, 39));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
