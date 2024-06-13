@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Main() {
   return (
     <div id="root">
       {/* Header */}
@@ -9,9 +9,12 @@ export default function Home() {
       <div className="m-2.5">
 
         {/* Introduction */}
-        {Section("Introduction", ["Hi!", 
-        "I'm a software developer in the UK that uses the Unity game engine,"
-        , "Node JS, and some web development projects in HTML and CSS."],
+        {Section
+        ("Introduction", 
+        ["Hi!", 
+        "I'm a software developer in the UK that uses the Unity game engine,",
+        "Node JS, and some web development projects in HTML and CSS."],
+        "text-cyan-500",
         "bg-black"
         )}
       </div>
@@ -19,14 +22,14 @@ export default function Home() {
   );
 }
 
-function Section(title: string, content: string[], bgcolor: string) {
+function Section(title: string, content: string[], titlecolor : string, bgcolor: string) {
 
   var FinalContent = null;
 
   if (title != "") {
     FinalContent = (
       <div>
-        <h1 className="text-cyan-500 text-10">{title}</h1>
+        <h1 className={titlecolor + " text-10"}>{title}</h1>
         <br></br>
         {content.map((item, index) => (
           <p key={index}>{item}</p>
