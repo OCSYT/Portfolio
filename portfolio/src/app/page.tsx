@@ -17,7 +17,7 @@ export default function Main() {
               "I'm a software developer in the UK that uses the Unity game engine,",
               "Node JS, and some web development projects in HTML and CSS."],
             "text-cyan-500",
-            "bg-black"
+            "bg-black bg-opacity-50"
           )}
 
         {/* Projects */}
@@ -41,7 +41,7 @@ export default function Main() {
               "/images/voxel.png"
             ],
             "text-red-500",
-            "bg-black"
+            "bg-black bg-opacity-50"
           )}
 
         
@@ -54,7 +54,7 @@ export default function Main() {
             "*Phone*: 07986015717"
           ],
           "text-green-500",
-          "bg-black"
+          "bg-black bg-opacity-50"
         )}
       </div>
     </div>
