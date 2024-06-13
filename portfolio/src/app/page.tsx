@@ -3,7 +3,7 @@ export default function Main() {
     <div id="root">
       <div id="background"></div>
       {/* Header */}
-      <div className="bg-black p-10 font-bold text-cyan-500 text-10">
+      <div className="bg-black p-10 font-bold text-cyan-500 text-3xl">
         <h1>Portfolio</h1>
       </div>
 
@@ -11,7 +11,7 @@ export default function Main() {
 
         {/* Introduction */}
         {Section
-          ("Introduction",
+          ("About Me",
             ["*Hey there!*",
               "\n",
               "I'm a software developer in the UK that uses the Unity game engine,",
@@ -51,7 +51,7 @@ export default function Main() {
             "\n",
             "*Github*: https://github.com/OCSYT",
             "\n",
-            "*Phone*: +44 07986015717"
+            "*Phone*: 07986015717"
           ],
           "text-green-500",
           "bg-black"
@@ -66,22 +66,31 @@ function Section(Title: string, Content: string[], TitleColor: string, BgColor: 
   const ProcessContent = (Text: string) => {
     return Text.split('\n').map((Line, LineIndex) => (
       <span key={LineIndex}>
-        {Line.split(/(\*.*?\*|https?:\/\/[^\s]+)/).map((Part, PartIndex) => {
+        {Line.split(/(\*.*?\*|https?:\/\/\S+)/).map((Part, PartIndex) => {
           if (Part.startsWith('*') && Part.endsWith('*')) {
-            return <strong key={PartIndex}>{Part.slice(1, -1)}</strong>;
-          } else if (Part.match(/https?:\/\/[^\s]+/)) {
-            if (Part.match(/\.(?:png|jpg|jpeg|gif)$/i)) {
-              return <img key={PartIndex} src={Part} alt="Image" style={{ maxWidth: '100%' }} />;
+            return (
+              <strong key={PartIndex}>
+                {Part.slice(1, -1)}
+              </strong>
+            );
+          } else if (Part.startsWith('http')) {
+            if (/\.(png|jpg|jpeg|gif)$/i.test(Part)) {
+              return (
+                <img key={PartIndex} src={Part} alt="Image" style={{ maxWidth: '100%' }} />
+              );
             } else {
-              return <a key={PartIndex} href={Part} target="_blank" rel="noopener noreferrer">{Part}</a>;
+              return (
+                <a key={PartIndex} href={Part} target="_blank" rel="noopener noreferrer">
+                  {Part}
+                </a>
+              );
             }
+          } else if (/\.(png|jpg|jpeg|gif)$/i.test(Part)) {
+            return (
+              <img key={PartIndex} src={Part} alt="Image" style={{ maxWidth: '100%' }} />
+            );
           } else {
-            if (Part.match(/\.(?:png|jpg|jpeg|gif)$/i)) {
-              return <img key={PartIndex} src={Part} alt="Image" style={{ maxWidth: '100%' }} />;
-            }
-            else {
-              return Part;
-            }
+            return Part;
           }
         })}
         {LineIndex < Text.split('\n').length - 1 && <br />}
@@ -89,15 +98,17 @@ function Section(Title: string, Content: string[], TitleColor: string, BgColor: 
     ));
   };
 
-  var FinalContent = null;
+  let FinalContent;
 
   if (Title !== "") {
     FinalContent = (
       <div>
-        <h1 className={TitleColor + " text-10"}>{Title}</h1>
+        <h1 className={`${TitleColor} text-3xl`}>{Title}</h1>
         <br />
         {Content.map((Item, Index) => (
-          <p key={Index}>{ProcessContent(Item)}</p>
+          <p key={Index}>
+            {ProcessContent(Item)}
+          </p>
         ))}
       </div>
     );
@@ -105,14 +116,16 @@ function Section(Title: string, Content: string[], TitleColor: string, BgColor: 
     FinalContent = (
       <div>
         {Content.map((Item, Index) => (
-          <p key={Index}>{ProcessContent(Item)}</p>
+          <p key={Index}>
+            {ProcessContent(Item)}
+          </p>
         ))}
       </div>
     );
   }
 
   return (
-    <div className={"p-10 m-10 rounded-lg max-w-screen-md " + BgColor}>
+    <div className={`p-10 m-10 rounded-lg max-w-screen-md ${BgColor}`}>
       {FinalContent}
     </div>
   );
