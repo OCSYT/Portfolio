@@ -3,7 +3,7 @@ export default function Main() {
     <div id="root">
       <div id="background"></div>
       {/* Header */}
-      <div className="bg-black p-10 font-bold text-cyan-500 text-3xl">
+      <div className="bg-black p-10 bg-opacity-75 font-bold text-cyan-500 text-3xl">
         <h1>Portfolio</h1>
       </div>
 
@@ -17,7 +17,7 @@ export default function Main() {
               "I'm a software developer in the UK that uses the Unity game engine,",
               "Node JS, and some web development projects in HTML and CSS."],
             "text-cyan-500",
-            "bg-black bg-opacity-50"
+            "bg-black bg-opacity-75"
           )}
 
         {/* Projects */}
@@ -26,14 +26,17 @@ export default function Main() {
             ["*Pokedex*",
               "https://drive.google.com/file/d/1VYL_uxi8Ktz8BOb2-NBto1vEcIAKyHGJ/view?usp=sharing",
               "\n",
+              "\n",
               "*SlimeTora*",
               "A project that connects HaritoraX full body trackers to the SlimeVR Server.",
               "https://github.com/OCSYT/SlimeTora",
+              "\n",
               "\n",
               "*BracketEngine*",
               "game engine that uses ThreeJS and the CannonJs Physics Engine.",
               "https://github.com/OCSYT/BracketEngine",
               "/images/engine.png",
+              "\n",
               "\n",
               "*VoxelProject*",
               "A recreation of Minecraft's Voxel's generation with Steamworks client host networking made in Unity.",
@@ -41,20 +44,22 @@ export default function Main() {
               "/images/voxel.png"
             ],
             "text-red-500",
-            "bg-black bg-opacity-50"
+            "bg-black bg-opacity-75"
           )}
 
         
         {/* Contact */}
         {Section("Contact Information",
-          ["*Email*: Connor.Macdonald.791@accesscreative.ac.uk",
+          ["*Email*: connor.macdonald.791@accesscreative.ac.uk",
+            "\n",
             "\n",
             "*Github*: https://github.com/OCSYT",
+            "\n",
             "\n",
             "*Phone*: 07986015717"
           ],
           "text-green-500",
-          "bg-black bg-opacity-50"
+          "bg-black bg-opacity-75"
         )}
       </div>
     </div>
