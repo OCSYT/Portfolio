@@ -27,7 +27,7 @@ export default function Main() {
               (<div><strong>Language</strong><strong className="fixed right-5">Experience</strong></div>),
               "\n\n",
               LanguageElement("Javascript", "Node JS, Browser", 100),
-              LanguageElement("C#", "Unity, Console Applications", 100),
+              LanguageElement("C#", "Unity, Console", 100),
               LanguageElement("HTML", "Browser", 100),
               LanguageElement("CSS", "Browser", 100),
               LanguageElement("Python", "Default", 85),
