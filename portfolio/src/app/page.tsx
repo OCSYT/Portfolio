@@ -51,7 +51,7 @@ export default function Main() {
                     "Tkinter",
                     "\n",
                     "*Typescript:*",
-                    "React, Next js",
+                    "React, Next JS",
                     "\n",
                     "*C++:*",
                     "OpenGL"
