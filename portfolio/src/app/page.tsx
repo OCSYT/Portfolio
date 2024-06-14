@@ -45,8 +45,16 @@ export default function Main() {
                     "*C#:*",
                     "Websocketsharp, Facepunch Transport for Netcode for GameObjects",
                     "\n",
+                    "*Python*",
+                    "Pandas",
+                    "Matplotlib",
+                    "Tkinter",
+                    "\n",
                     "*Typescript:*",
-                    "React, Next js"
+                    "React, Next js",
+                    "\n",
+                    "*C++:*",
+                    "OpenGL"
                   ],
                   "text-purple-500",
                   "bg-transparent"
