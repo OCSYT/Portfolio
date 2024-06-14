@@ -45,7 +45,7 @@ export default function Main() {
                     "*C#:*",
                     "Websocketsharp, Facepunch Transport for Netcode for GameObjects",
                     "\n",
-                    "*Python*",
+                    "*Python:*",
                     "Pandas",
                     "Matplotlib",
                     "Tkinter",
