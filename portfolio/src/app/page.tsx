@@ -15,7 +15,7 @@ export default function Main() {
             ["*Hey there!*",
               "\n",
               "I'm a software developer in the UK that uses the Unity game engine,",
-              "Node JS, and some web development projects in HTML and CSS",
+              "Node JS, some web development projects in HTML and CSS",
               "and console applications in python."],
             "text-cyan-500",
             "bg-black backdrop-blur bg-opacity-50"
