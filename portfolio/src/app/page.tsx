@@ -3,7 +3,7 @@ export default function Main() {
     <div id="root">
       <div id="background"></div>
       {/* Header */}
-      <div className="backdrop-blur bg-black p-10 bg-opacity-75 font-bold text-cyan-500 text-3xl">
+      <div className="backdrop-blur bg-black p-10 bg-opacity-50 font-bold text-cyan-500 text-3xl">
         <h1>Portfolio</h1>
       </div>
 
@@ -17,7 +17,7 @@ export default function Main() {
               "I'm a software developer in the UK that uses the Unity game engine,",
               "Node JS, and some web development projects in HTML and CSS."],
             "text-cyan-500",
-            "bg-black backdrop-blur bg-opacity-75"
+            "bg-black backdrop-blur bg-opacity-50"
           )}
 
         {Section
@@ -53,7 +53,7 @@ export default function Main() {
             ],
 
             "text-purple-500",
-            "bg-black backdrop-blur bg-opacity-75"
+            "bg-black backdrop-blur bg-opacity-50"
           )}
 
         {/* Projects */}
@@ -80,7 +80,7 @@ export default function Main() {
               "/images/voxel.png"
             ],
             "text-red-500",
-            "bg-black backdrop-blur bg-opacity-75"
+            "bg-black backdrop-blur bg-opacity-50"
           )}
 
 
@@ -95,7 +95,7 @@ export default function Main() {
             "*Phone*: 07986015717"
           ],
           "text-green-500",
-          "bg-black backdrop-blur bg-opacity-75"
+          "bg-black backdrop-blur bg-opacity-50"
         )}
       </div>
 
