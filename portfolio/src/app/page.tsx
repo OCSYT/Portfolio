@@ -23,24 +23,32 @@ export default function Main() {
         {Section
           ("Programming Languages",
             [
-              (<div><strong>Language</strong><strong className="fixed right-5">Confidence</strong></div>),
+              (<div><strong>Language</strong><strong className="fixed right-5">Experience</strong></div>),
               "\n\n",
               LanguageElement("Javascript", "NodeJS, Browser", 100),
               LanguageElement("C#", "Unity, Console Applications", 100),
               LanguageElement("HTML", "Browser", 100),
               LanguageElement("CSS", "Browser", 100),
-              LanguageElement("Python", "Default", 90),
+              LanguageElement("Python", "Default", 85),
               LanguageElement("Typescript", "NodeJS", 60),
               LanguageElement("C++", "Console", 50),
               "\n\n\n\n",
               Section
                 ("Libraries / Frameworks",
-                  ["*A list of some of the libraries and frameworks i've used*",
+                  [
+                    "*A list of some of the libraries and frameworks i've used*",
                     "\n",
                     "*Javascript:*",
-                    "Ws + Socket.io", "Express", "ThreeJS", "Electron"],
+                    "Ws + Socket.io", "Express", "ThreeJS", "Electron",
+                    "\n",
+                    "*C#:*",
+                    "Websocketsharp, Facepunch Transport for Netcode for GameObjects",
+                    "\n",
+                    "*Typescript:*",
+                    "React, Next js"
+                  ],
                   "text-purple-500",
-                  "bg-black"
+                  "bg-transparent"
                 )
             ],
 
