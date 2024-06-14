@@ -26,12 +26,12 @@ export default function Main() {
             [
               (<div><strong>Language</strong><strong className="fixed right-5">Experience</strong></div>),
               "\n\n",
-              LanguageElement("Javascript", "NodeJS, Browser", 100),
+              LanguageElement("Javascript", "Node JS, Browser", 100),
               LanguageElement("C#", "Unity, Console Applications", 100),
               LanguageElement("HTML", "Browser", 100),
               LanguageElement("CSS", "Browser", 100),
               LanguageElement("Python", "Default", 85),
-              LanguageElement("Typescript", "NodeJS", 60),
+              LanguageElement("Typescript", "Node JS", 60),
               LanguageElement("C++", "Console", 50),
               "\n\n\n\n",
               Section
