@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Main() {
   return (
     <div id="root">
@@ -13,7 +15,7 @@ export default function Main() {
         {Section
           ("About Me",
             ["*Hey there!*",
-              "\n",
+              "\n\n",
               "I'm a software developer in the UK that uses the Unity game engine,",
               "Node JS, some web development projects in HTML and CSS",
               "and console applications in python."],
@@ -24,7 +26,7 @@ export default function Main() {
         {Section
           ("Programming Languages",
             [
-              (<div><strong>Language</strong><strong className="fixed right-5">Experience</strong></div>),
+              (<div key="GraphTitle"><strong>Language</strong><strong className="fixed right-5">Experience</strong></div>),
               "\n\n",
               LanguageElement("Javascript", "Node JS, Browser", 100),
               LanguageElement("C#", "Unity, Console", 100),
@@ -165,7 +167,7 @@ function Section(Title: string, Content: any[], TitleColor: string, BgColor: str
           } else if (Part.startsWith('http')) {
             if (/\.(png|jpg|jpeg|gif)$/i.test(Part)) {
               return (
-                <img key={PartIndex} src={Part} alt="Image" style={{ maxWidth: '100%' }} />
+                <Image key={PartIndex} src={Part} alt="Image" layout="responsive" width={700} height={475} />
               );
             } else {
               return (
@@ -176,7 +178,7 @@ function Section(Title: string, Content: any[], TitleColor: string, BgColor: str
             }
           } else if (/\.(png|jpg|jpeg|gif)$/i.test(Part)) {
             return (
-              <img key={PartIndex} src={Part} alt="Image" style={{ maxWidth: '100%' }} />
+              <Image key={PartIndex} src={Part} alt="Image" layout="responsive" width={700} height={475} />
             );
           } else {
             return Part;
