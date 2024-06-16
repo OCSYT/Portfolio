@@ -41,25 +41,30 @@ export default function Main() {
                     "\n",
                     "\n",
                     "*Javascript:*",
-                    "Ws + Socket.io", "Express", "ThreeJS", "Electron",
+                    "- Ws + Socket.io", 
+                    "- Express", 
+                    "- ThreeJS", 
+                    "- Electron",
                     "\n",
                     "\n",
                     "*C#:*",
-                    "Websocketsharp, Facepunch Transport for Netcode for GameObjects",
+                    "- Websocketsharp",
+                    "- Facepunch Transport for Netcode for GameObjects",
                     "\n",
                     "\n",
                     "*Python:*",
-                    "Pandas",
-                    "Matplotlib",
-                    "Tkinter",
+                    "- Pandas",
+                    "- Matplotlib",
+                    "- Tkinter",
                     "\n",
                     "\n",
                     "*Typescript:*",
-                    "React, Next JS",
+                    "- React", 
+                    "- Next JS",
                     "\n",
                     "\n",
                     "*C++:*",
-                    "OpenGL"
+                    "- OpenGL"
                   ],
                   "text-purple-500",
                   "bg-transparent"
@@ -138,7 +143,7 @@ function LanguageElement(Name: string, Content: string, Amount: number) {
     <div className="w-full h-full">
       <strong className="inline-block">{Name} &nbsp;&nbsp;&nbsp;</strong>
       <div className="absolute mr-5 inline-block w-9/12">
-        <div style={{ width: "calc(" + Amount / 2 + "% - 5vh)", height: "25px" }} className={"languagebar " + BarColor + " p-[.1vw] truncate fixed right-5 rounded-[2.5rem]"}><p className="relative bottom-0 left-5">{Content}</p></div>
+        <div style={{ width: "calc(" + Amount / 2 + "% - 10vh)", height: "25px" }} className={"languagebar " + BarColor + " p-[.1vw] truncate fixed right-5 rounded-[2.5rem]"}><p className="relative bottom-0 left-5">{Content}</p></div>
       </div>
       <br /><br />
     </div>
