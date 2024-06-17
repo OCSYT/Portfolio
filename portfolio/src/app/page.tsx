@@ -126,7 +126,6 @@ export default function Main() {
 }
 
 function LanguageElement(Name: string, Content: string, Amount: number) {
-
   var BarColor: string = "bg-black";
   if (Amount > 90) {
     BarColor = "bg-cyan-500";
