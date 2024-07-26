@@ -111,9 +111,6 @@ export default function Main() {
             "\n",
             "\n",
             "*Github*: https://github.com/OCSYT",
-            "\n",
-            "\n",
-            "*Phone*: 07986015717"
           ],
           "text-green-500",
           "bg-black backdrop-blur bg-opacity-50"
