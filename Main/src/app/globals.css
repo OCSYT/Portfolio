@@ -8,6 +8,7 @@ body, html {
   height: 100%;
   color: rgb(255, 255, 255);
   word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -20,7 +21,9 @@ body, html {
 a{
   color: aqua;
 }
-
+a:hover{
+  color: black;
+}
 #background{
   background-image: url("/images/background.png");
   background-size: cover;
@@ -32,7 +35,7 @@ a{
 }
 
 .m-border{
-  margin: 2.5rem;
+  margin: 1%;
 }
 
 @media screen and (max-width: 800px) {
@@ -40,6 +43,7 @@ a{
       color: rgba(0,0,0,0);
   }
   .m-border{
-    margin: .1rem;
+    margin-right: 5%;
+    margin-left: 2.5%;
   }
 }
