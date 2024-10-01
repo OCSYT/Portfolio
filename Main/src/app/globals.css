@@ -54,14 +54,14 @@ a:hover{
 	width:1px;
 	height:89px;
 	position: absolute;
-	bottom:200px;
+	bottom:0;
 	animation: fall .91s linear infinite;
   z-index: 0;
 }
 
 /* animate the drops*/
 @keyframes fall {
-	to {margin-top:900px;}
+	to {margin-top:90%;}
 }
 
 
