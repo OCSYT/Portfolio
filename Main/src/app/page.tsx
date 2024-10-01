@@ -71,7 +71,7 @@ function Section(Title: string, Content: any[], TitleColor: string, BgColor: str
 
   if (Title !== "") {
     FinalContent = (
-      <div className="w-[full]">
+      <div className="w-full">
         <h1 className={`${TitleColor} text-3xl`}>{Title}</h1>
         <br />
         {Content.map((Item, Index) => (
@@ -95,25 +95,25 @@ function Section(Title: string, Content: any[], TitleColor: string, BgColor: str
 
   return (
     <div>
-      <div className={`p-10 m-border rounded-[2.5rem] content-container ${BgColor}`}>
+      <div className={`m-border rounded-[2.5rem] content-container ${BgColor}`}>
         {FinalContent}
       </div>
       <br></br>
     </div>
   );
 }
-  
+
 function Introduction() {
   let Element: any =
     Section
       ("About Me",
-        ["*Hey there! 👋*", 
+        ["*Hey there! 👋*",
           "\n\n",
           "I'm a software developer in the UK that uses the Unity game engine,",
           "Node JS, some web development projects in HTML and CSS",
           "and console applications in python."],
         "text-cyan-500",
-        "bg-black backdrop-blur bg-opacity-50"
+        "bg-black backdrop-blur bg-opacity-50 p-10 text-center"
       )
   return Element;
 }
@@ -132,11 +132,10 @@ function ProgrammingLanguages() {
           LanguageElement("HTML", "Browser", 90),
           LanguageElement("CSS", "Browser", 75),
           LanguageElement("C++", "Console", 50),
-          "\n\n\n\n",
-          <LibrariesAndFrameworks></LibrariesAndFrameworks>
+          "\n\n\n\n"
         ],
         "text-purple-500",
-        "bg-black backdrop-blur bg-opacity-50"
+        "bg-black backdrop-blur bg-opacity-50 p-10"
       )
   return Element;
 }
@@ -180,7 +179,7 @@ function LibrariesAndFrameworks() {
           "- Tailwind",
         ],
         "text-purple-500",
-        "bg-transparent p-0"
+        "bg-black backdrop-blur bg-opacity-50 p-10"
       )
   return Element;
 }
@@ -219,40 +218,72 @@ function Projects() {
         "/images/voxel.png"
       ],
       "text-red-500",
-      "bg-black backdrop-blur bg-opacity-50"
+      "bg-black backdrop-blur bg-opacity-50 p-10 text-center"
     )
   return Element;
 }
 
-function ContactInfo(){
-  let Element: any = 
-  Section("Contact Information",
-    ["*Email*: connor.macdonald.791@accesscreative.ac.uk",
-      "\n",
-      "\n",
-      "*Github*: https://github.com/OCSYT",
-    ],
-    "text-green-500",
-    "bg-black backdrop-blur bg-opacity-50"
-  )
+function ContactInfo() {
+  let Element: any =
+    Section("Contact Information",
+      ["*Email*: connor.macdonald.791@accesscreative.ac.uk",
+        "\n",
+        "\n",
+        "*Github*: https://github.com/OCSYT",
+      ],
+      "text-green-500",
+      "bg-black backdrop-blur bg-opacity-50 p-10 text-center"
+    )
   return Element;
 }
+
+
+
+function CreateRain() {
+  const RandRange = (minNum: any, maxNum: any) => {
+    return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+  };
+
+  const CreateDrops = () => {
+    const drops = [];
+    for (let i = 0; i < 100; i++) {
+      const DropLeft = RandRange(0, 1600);
+      const DropTop = RandRange(-1000, 1400);
+      drops.push(
+        <div
+          key={i}
+          style={{ left: DropLeft, top: DropTop, position: 'absolute' }}
+          className="drop"
+        />
+      );
+    }
+    return drops;
+  };
+
+  return (
+    <div className="rain rain fixed w-full h-full pointer-events-none overflow-hidden">
+      {CreateDrops()}
+    </div>
+  );
+}
+
 
 export default function Main() {
   return (
     <div id="root">
-      <div id="background"></div>
-      {/* Header */}
-      <div className="backdrop-blur bg-black p-10 bg-opacity-50 font-bold text-cyan-500 text-3xl mb-10 sticky top-0 z-10">
-        <h1>Connor Macdonald</h1>
-      </div>
-      <div className="m-2.5 w-full flex flex-col min-h-screen justify-center items-center">
+      <div id="background" />
+      <CreateRain />
+      <div className="m-0 p-0 w-full flex flex-col min-h-screen justify-center items-center container">
+        {/* Header */}
+        <div className="bg-transparent p-10 font-bold text-cyan-500 text-3xl mb-10 top-0 z-10 text-center">
+          <h1>Connor Macdonald</h1>
+        </div>
         <Introduction></Introduction>
         <ProgrammingLanguages></ProgrammingLanguages>
+        <LibrariesAndFrameworks></LibrariesAndFrameworks>
         <Projects></Projects>
         <ContactInfo></ContactInfo>
       </div>
-      <br></br>
     </div>
   );
 }

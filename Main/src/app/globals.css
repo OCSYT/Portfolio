@@ -35,9 +35,6 @@ a:hover{
   z-index: -1;
 }
 
-.m-border{
-  margin: 0%;
-}
 .content-container{
   width: 50vw;
 }
@@ -46,10 +43,31 @@ a:hover{
   .languagebar {
       color: rgba(0,0,0,0);
   }
-  .m-border{
-    margin: -1%;
-  }
   .content-container{
     width: 90vw;
   }
+}
+
+.drop {
+  background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
+  background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	-webkit-animation: fall .91s linear infinite;
+  -moz-animation: fall .91s linear infinite;
+  
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
+.container{
+  margin-bottom: 250px;
 }
