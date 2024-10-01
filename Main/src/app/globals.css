@@ -24,6 +24,7 @@ a{
 a:hover{
   color: black;
 }
+
 #background{
   background: linear-gradient(0deg, rgba(19, 19, 19, 1) 0%, rgba(0, 2, 97, 1) 100%);
   background-size: cover;
@@ -35,7 +36,10 @@ a:hover{
 }
 
 .m-border{
-  margin: 1%;
+  margin: 0%;
+}
+.content-container{
+  width: 50vw;
 }
 
 @media screen and (max-width: 800px) {
@@ -43,7 +47,9 @@ a:hover{
       color: rgba(0,0,0,0);
   }
   .m-border{
-    margin-right: 5%;
-    margin-left: 2.5%;
+    margin: -1%;
+  }
+  .content-container{
+    width: 90vw;
   }
 }

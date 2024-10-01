@@ -1,5 +1,6 @@
 //RUN USING npm run dev
 import Image from 'next/image';
+import { relative } from 'path';
 import React, { useState, useEffect } from "react";
 const PageURL = "http://localhost:3000"
 
@@ -22,7 +23,7 @@ function LanguageElement(Name: string, Content: string, Amount: number) {
     <div className="w-full h-full">
       <strong className="inline-block">{Name} &nbsp;&nbsp;&nbsp;</strong>
       <div className="absolute mr-5 inline-block w-9/12">
-        <div style={{ width: "calc(" + Amount / 2 + "% - 10vh)", height: "25px" }} className={"languagebar " + BarColor + " p-[.1vw] truncate fixed right-5 rounded-[2.5rem]"}><p className="relative bottom-0 left-5">{Content}</p></div>
+        <div style={{ width: "calc(" + Amount / 2 + "% - 2vh)", height: "25px" }} className={"languagebar " + BarColor + " p-[.1vw] truncate fixed right-5 rounded-[2.5rem]"}><p className="relative bottom-0 left-5">{Content}</p></div>
       </div>
       <br /><br />
     </div>
@@ -70,7 +71,7 @@ function Section(Title: string, Content: any[], TitleColor: string, BgColor: str
 
   if (Title !== "") {
     FinalContent = (
-      <div className="w-full">
+      <div className="w-[full]">
         <h1 className={`${TitleColor} text-3xl`}>{Title}</h1>
         <br />
         {Content.map((Item, Index) => (
@@ -94,7 +95,7 @@ function Section(Title: string, Content: any[], TitleColor: string, BgColor: str
 
   return (
     <div>
-      <div className={`p-10 m-border rounded-[2.5rem] max-w-screen-md ${BgColor}`}>
+      <div className={`p-10 m-border rounded-[2.5rem] content-container ${BgColor}`}>
         {FinalContent}
       </div>
       <br></br>
@@ -106,7 +107,7 @@ function Introduction() {
   let Element: any =
     Section
       ("About Me",
-        ["*Hey there!*",
+        ["*Hey there! 👋*", 
           "\n\n",
           "I'm a software developer in the UK that uses the Unity game engine,",
           "Node JS, some web development projects in HTML and CSS",
@@ -245,7 +246,7 @@ export default function Main() {
       <div className="backdrop-blur bg-black p-10 bg-opacity-50 font-bold text-cyan-500 text-3xl mb-10 sticky top-0 z-10">
         <h1>Connor Macdonald</h1>
       </div>
-      <div className="m-2.5 w-full">
+      <div className="m-2.5 w-full flex flex-col min-h-screen justify-center items-center">
         <Introduction></Introduction>
         <ProgrammingLanguages></ProgrammingLanguages>
         <Projects></Projects>
