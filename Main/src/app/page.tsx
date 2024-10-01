@@ -1,3 +1,4 @@
+//RUN USING npm run dev
 import Image from 'next/image';
 import React, { useState, useEffect } from "react";
 const PageURL = "http://localhost:3000"
@@ -186,7 +187,16 @@ function LibrariesAndFrameworks() {
 function Projects() {
   let Element: any = Section
     ("Projects",
-      ["*Pokedex*",
+      ["*Portfolio - You're Here!*",
+        "A portfolio site for some of my projects - Made using React",
+        "\n",
+        "\n",
+        "*Ram Clicker*",
+        "A cookie clicker style game that uses Javascript and Flask",
+        PageURL + "/Projects/Ram_Clicker/Ram_Clicker.zip",
+        "\n",
+        "\n",
+        "*Pokedex (Python)*",
         "A project that allows you to find and search for pokemon by type, name, id. Written in python.",
         PageURL + "/Projects/Pokedex/main.py",
         "\n",
