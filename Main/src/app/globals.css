@@ -56,7 +56,7 @@ a:hover{
 	position: absolute;
 	bottom:200px;
 	animation: fall .91s linear infinite;
-  
+  z-index: 0;
 }
 
 /* animate the drops*/
