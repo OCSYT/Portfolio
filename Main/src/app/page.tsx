@@ -126,8 +126,8 @@ function ProgrammingLanguages() {
           LanguageElement("Javascript", "Node JS, Browser", 100),
           LanguageElement("Typescript", "Node JS", 100),
           LanguageElement("C#", "Unity, Console", 100),
-          LanguageElement("Python", "Default", 100),
-          LanguageElement("HTML", "Browser", 80),
+          LanguageElement("Python", "Console", 100),
+          LanguageElement("HTML", "Browser", 90),
           LanguageElement("CSS", "Browser", 75),
           LanguageElement("C++", "Console", 50),
           "\n\n\n\n",
@@ -178,7 +178,7 @@ function LibrariesAndFrameworks() {
           "- Tailwind",
         ],
         "text-purple-500",
-        "bg-transparent"
+        "bg-transparent p-0"
       )
   return Element;
 }
@@ -232,8 +232,8 @@ export default function Main() {
     <div id="root">
       <div id="background"></div>
       {/* Header */}
-      <div className="backdrop-blur bg-black p-10 bg-opacity-50 font-bold text-cyan-500 text-3xl">
-        <h1>Portfolio</h1>
+      <div className="backdrop-blur bg-black p-10 bg-opacity-50 font-bold text-cyan-500 text-3xl mb-10 sticky top-0 z-10">
+        <h1>Connor Macdonald</h1>
       </div>
       <div className="m-2.5 w-full">
         <Introduction></Introduction>
