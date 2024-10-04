@@ -212,7 +212,7 @@ function Projects() {
         "/images/engine.png",
         "\n",
         "\n",
-        "*VoxelProject*",
+        "*Voxel*",
         "A recreation of Minecraft's Voxel's generation with Steamworks client host networking made in Unity.",
         "https://github.com/OCSYT/VoxelProject",
         "/images/voxel.png"
