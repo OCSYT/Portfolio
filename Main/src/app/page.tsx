@@ -248,7 +248,7 @@ function CreateRain() {
     const drops = [];
     for (let i = 0; i < 500; i++) {
       const DropLeft = RandRange(0, 1600);
-      const DropTop = RandRange(-1000, 10000);
+      const DropTop = RandRange(-10000, 10000);
       drops.push(
         <div
           key={i}
