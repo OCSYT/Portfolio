@@ -42,6 +42,15 @@ a:hover{
   margin-bottom: 100px;
 }
 
+@media screen and (max-width: 500px) {
+  .content-container{
+    width: 90vw;
+  }
+  .language-text{
+    visibility: hidden;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .content-container{
     width: 90vw;
