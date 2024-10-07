@@ -36,17 +36,47 @@ a:hover{
 }
 
 .content-container{
-  width: 50vw;
+  width: 75vw;
+}
+.container{
+  margin-bottom: 100px;
 }
 
-@media screen and (max-width: 800px) {
-  .languagebar {
-      color: rgba(0,0,0,0);
-  }
+@media screen and (max-width: 768px) {
   .content-container{
     width: 90vw;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  .content-container{
+    width: 75vw;
+  }
+  .content-container>*{
+    zoom: 2;
+    padding: 5%;
+  }
+  .title{
+    zoom: 2;
+  }
+}
+
+@media screen and (min-width: 4000px) {
+  .content-container{
+    width: 75vw;
+  }
+  .content-container>*{
+    zoom: 4;
+    padding: 5%;
+  }
+  .title{
+    zoom: 4;
+  }
+  .language-text{
+    bottom: 25%;
+  }
+}
+
 
 .drop {
   background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
@@ -61,9 +91,4 @@ a:hover{
 /* animate the drops*/
 @keyframes fall {
 	to {margin-top:100%; opacity: 1;}
-}
-
-
-.container{
-  margin-bottom: 100px;
 }
