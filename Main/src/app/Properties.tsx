@@ -1,7 +1,7 @@
 function Properties() {
     return (
         {
-            PageURL: "http://localhost:3000/"
+            PageURL: "http://localhost:3000"
         }
     )
 }
