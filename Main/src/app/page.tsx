@@ -10,7 +10,6 @@ import ContactInfo from './Contact';
 export default function Main() {
   return (
     <div id="root">
-      <div id="background" />
       <CreateRain />
       <div className="m-0 p-0 w-full flex flex-col min-h-screen justify-center items-center container">
         {/* Header */}
