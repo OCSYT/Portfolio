@@ -29,7 +29,7 @@ function Projects() {
                 "\n",
                 "\n",
                 "*BracketEngine*",
-                "A game engine that uses ThreeJS and the CannonJs Physics Engine.",
+                "A game engine that uses ThreeJS and the Cannon.Js Physics Engine.",
                 "https://github.com/OCSYT/BracketEngine",
                 "/images/engine.png",
                 "\n",
