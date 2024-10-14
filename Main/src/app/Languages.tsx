@@ -6,7 +6,7 @@ function ProgrammingLanguages() {
       Section
         ("Programming Languages",
           [
-            (<div key="GraphTitle"><strong>Language</strong><strong className="fixed right-5">Experience</strong></div>),
+            (<div key="GraphTitle"><strong>Language</strong><strong className="fixed right-5">Confidence/Experience</strong></div>),
             "\n\n",
             LanguageElement("Javascript", "Node JS, Browser", 100),
             LanguageElement("Typescript", "Node JS", 100),
