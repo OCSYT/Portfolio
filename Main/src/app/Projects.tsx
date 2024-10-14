@@ -1,5 +1,5 @@
 import Section from "./Section";
-import Properties from "./Properties";
+import Properties from "./Properties.json";
 
 function Projects() {
     let Element: any = Section
@@ -10,12 +10,12 @@ function Projects() {
                 "\n",
                 "*Ram Clicker*",
                 "A cookie clicker style game that uses Javascript and Flask",
-                Properties().PageURL + "/Projects/Ram_Clicker/Ram_Clicker.zip",
+                Properties.PageURL + "/Projects/Ram_Clicker/Ram_Clicker.zip",
                 "\n",
                 "\n",
                 "*Pokedex (Python)*",
                 "A project that allows you to find and search for pokemon by type, name, id. Written in python.",
-                Properties().PageURL + "/Projects/Pokedex/main.py",
+                Properties.PageURL + "/Projects/Pokedex/main.py",
                 "\n",
                 "\n",
                 "\n",
